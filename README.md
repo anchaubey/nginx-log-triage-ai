@@ -212,6 +212,19 @@ Then verify:
 }
 ```
 
+## Email received via SNS
+
+![email](./images/Screenshot-from-2026-04-19-12-21-55.png)
+
+
+## Test made via Lambda Function
+
+
+![request](./images/request_json.png)
+
+![test](./images/test_on_lambda.png)
+
+
 ## Requirements
 
 - AWS account with EC2 running NGINX
