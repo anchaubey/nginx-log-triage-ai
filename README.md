@@ -214,7 +214,7 @@ Then verify:
 
 ## Email received via SNS
 
-![email](https://raw.githubusercontent.com/anchaube/nginx-log-triage-ai/main/images/email.png)
+![email](https://github.com/anchaubey/nginx-log-triage-ai/blob/main/images/email.png)
 
 ## Test made via Lambda Function
 
