@@ -1,0 +1,5 @@
+# Drop this file at /etc/cron.d/nginx-s3-sync on your EC2
+# Syncs NGINX logs to S3 every 5 minutes
+# Replace /usr/local/bin/aws with output of: which aws
+
+*/5 * * * * root /usr/local/bin/aws s3 sync /var/log/nginx/ s3://test-logs-ai-4-19-2026/raw/$(date +\%Y/\%m/\%d)/ --exclude "*.gz" --exclude "*.pid" --region eu-west-1

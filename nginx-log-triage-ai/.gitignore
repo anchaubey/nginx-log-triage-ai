@@ -1,0 +1,13 @@
+# Lambda packaging
+package/
+triage.zip
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# IDE
+.vscode/
+.idea/
