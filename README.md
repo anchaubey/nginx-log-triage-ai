@@ -1,8 +1,8 @@
-# nginx-log-triage-ai
+# 🚀 nginx-log-triage-ai
 
 Automatically ship NGINX access logs from EC2 to S3, trigger a Lambda function every 5 minutes, and use OpenAI GPT-4o-mini to triage logs for anomalies, errors, and suspicious traffic. Results are saved back to S3 as JSON and alerts are sent via SNS on WARNING or CRITICAL findings.
 
-## Architecture
+## 🏗️ Architecture
 
 ```
 EC2 (NGINX)
@@ -24,7 +24,7 @@ OpenAI API
     └──→ SNS email alert (WARNING / CRITICAL only)
 ```
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 nginx-log-triage-ai/
@@ -40,7 +40,7 @@ nginx-log-triage-ai/
 
 ---
 
-## Step-by-Step Setup (AWS Console — Manual)
+## 🛠️ Step-by-Step Setup (AWS Console — Manual)
 
 ### Step 1 — S3 Bucket
 
@@ -184,7 +184,7 @@ Then verify:
 
 ---
 
-## How It Works
+## ⚙️ How It Works
 
 - Cron runs every 5 minutes on EC2 and syncs `/var/log/nginx/` to S3
 - S3 fires an `ObjectCreated` event the moment a file lands
@@ -193,7 +193,7 @@ Then verify:
 - Result is saved to `triage/yyyy/mm/dd/<filename>.json` in the same S3 bucket
 - If severity is `WARNING` or `CRITICAL`, an SNS email alert is sent
 
-## Triage Output Example
+## 📊 Triage Output Example
 
 ```json
 {
@@ -212,11 +212,11 @@ Then verify:
 }
 ```
 
-## Email received via SNS
+## 📧 Email received via SNS
 
 ![email](https://github.com/anchaubey/nginx-log-triage-ai/blob/main/images/email.png)
 
-## Test made via Lambda Function
+## 🧪 Test made via Lambda Function
 
 
 ![request](./images/request_json.png)
@@ -224,7 +224,7 @@ Then verify:
 ![test](./images/test_on_lambda.png)
 
 
-## Requirements
+## 📋 Requirements
 
 - AWS account with EC2 running NGINX
 - OpenAI API key with credits
